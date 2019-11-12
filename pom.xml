@@ -7,26 +7,72 @@
     <groupId>codevember</groupId>
     <artifactId>Codevember_2019</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <dependencies>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>3.14.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.14.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>3.14.0</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+
+    <properties>
+    <maven.compiler.target>1.12</maven.compiler.target>
+    <maven.compiler.source>1.12</maven.compiler.source>
+    </properties>
+
+    <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>1.8</source>
+                            <target>1.8</target>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>2.21.0</version>
+                        <configuration>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+                            </suiteXmlFiles>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+
+            <dependencies>
+                <dependency>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                    <version>7.0.0-beta3</version>
+                </dependency>
+
+                <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+                <dependency>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-java</artifactId>
+                    <version>3.12.0</version>
+                </dependency>
 
 
+                <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all -->
+                <dependency>
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-all</artifactId>
+                    <version>1.3</version>
+                    <scope>test</scope>
+                </dependency>
+
+                <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+                <dependency>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-io</artifactId>
+                    <version>1.3.2</version>
+                </dependency>
+                <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-compress -->
+
+                <dependency>
+                    <groupId>org.hamcrest</groupId>
+                    <artifactId>hamcrest-all</artifactId>
+                    <version>1.3</version>
+                    <scope>compile</scope>
+                </dependency>
+
+            </dependencies>
 </project>
