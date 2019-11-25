@@ -41,6 +41,11 @@ public class HomePage {
         driver.findElement(By.linkText(linkText)).click();
     }
 
+    public ForgotPasswordPage clickForfotPassword(){
+        clickLink("Forgot Password");
+        return new ForgotPasswordPage(driver);
+    }
+
 
 
 }
