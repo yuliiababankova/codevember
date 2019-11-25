@@ -27,6 +27,12 @@ public class HomePage {
         return new DropdownPage(driver);
     }
 
+    public HoversPage clickHovers(){
+        clickLink("Hovers");
+        return new HoversPage(driver);
+
+    }
+
     public WysiwygEditorPage clickWysiwygEditor(){
         clickLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
